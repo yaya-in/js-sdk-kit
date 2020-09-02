@@ -1,0 +1,43 @@
+{
+  "name": "@tempalte/js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build:dev": "rm -f ./dist/* && rollup -c ./build/rollup.config.dev.js --environment BUILD:dev",
+    "build:prod": "rollup -c ./build/rollup.config.prod.js --environment BUILD:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yaya-in/js-sdk-kit.git"
+  },
+  "keywords": [
+    "DApp",
+    "SDK"
+  ],
+  "author": "Yaya Team",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-json": "^4.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-banner": "^0.2.1",
+    "rollup-plugin-progress": "^1.1.1",
+    "rollup-plugin-sizes": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.7"
+  },
+  "publishConfig": {
+    "registry": "http://nexus-pw.pundix.com:8083/repository/npm-test/"
+  }
+}
